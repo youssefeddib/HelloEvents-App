@@ -52,5 +52,15 @@ public class AuthService {
         return jwtService.generateToken(utilisateur);
     }
 
+    public String login(LoginRequest request) {
+        Utilisateur utilisateur = utilisateurRepository.findByEmail(request.getEmail())
+                .orElseThrow(() -> new RuntimeException("Utilisateur introuvable"));
 
+
+        if (!passwordEncoder.matches(request.getPassword(), utilisateur.getPassword())) {
+            throw new RuntimeException("Mot de passe incorrect");
+        }
+
+        return jwtService.generateToken(utilisateur);
+    }
 }
