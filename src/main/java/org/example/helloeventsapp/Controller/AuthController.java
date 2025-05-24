@@ -30,6 +30,14 @@ public class AuthController {
         }
     }
 
-
+    @PostMapping("/login")
+    public ResponseEntity<?> login(@RequestBody @Valid LoginRequest request) {
+        try {
+            String jwt = authService.login(request);
+            return ResponseEntity.ok("Connexion réussie. Token: " + jwt);
+        } catch (RuntimeException e) {
+            return ResponseEntity.badRequest().body("Erreur de connexion: " + e.getMessage());
+        }
+    }
 }
 
