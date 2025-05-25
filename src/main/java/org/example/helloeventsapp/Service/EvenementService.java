@@ -42,5 +42,10 @@ public class EvenementService {
         }).orElseThrow(() -> new RuntimeException("Événement non trouvé avec ID: " + id));
     }
 
-
+    public void deleteEvenement(Long id) {
+        if (!evenementRepository.existsById(id)) {
+            throw new RuntimeException("Événement introuvable pour suppression");
+        }
+        evenementRepository.deleteById(id);
+    }
 }
