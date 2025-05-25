@@ -54,3 +54,8 @@ Ce projet est une **application web** développée pour permettre la réservatio
 - 🗄️ **Base de données :**
     - MySQL / PostgreSQL
 
+
+
+le diagrame de cas d'utilisation
+![cas d'utilisation](images/caseven.png)
+
