@@ -54,8 +54,16 @@ Ce projet est une **application web** développée pour permettre la réservatio
 - 🗄️ **Base de données :**
     - MySQL / PostgreSQL
 
+## 🖼️ Diagrammes du Système
 
+### 📌 Diagramme de classe :
 
-le diagrame de cas d'utilisation
-![cas d'utilisation](images/caseven.png)
+![Diagramme classe](images/diagrame1.png)
+
+---
+
+### 🗃️ Diagramme de cas d'utilisation :
+
+![Diagramme Base de Données](images/diagrame2.png)
+
 

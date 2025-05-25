@@ -21,7 +21,13 @@ public class Reservation {
     @JoinColumn(name = "utilisateur_id", nullable = false)
     private Utilisateur utilisateur;
 
+    @ManyToOne
+    @JoinColumn(name = "evenement_id", nullable = false)
+    private Evenement evenement;
+
+
     public Reservation() {}
+
 
     public Long getId() {
         return id;
@@ -53,5 +59,13 @@ public class Reservation {
 
     public void setUtilisateur(Utilisateur utilisateur) {
         this.utilisateur = utilisateur;
+    }
+
+    public Evenement getEvenement() {
+        return evenement;
+    }
+
+    public void setEvenement(Evenement evenement) {
+        this.evenement = evenement;
     }
 }
