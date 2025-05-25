@@ -31,3 +31,16 @@ public class EvenementService {
                 .orElseThrow(() -> new RuntimeException("Événement non trouvé avec ID: " + id));
     }
 
+    public Evenement updateEvenement(Long id, Evenement updatedEvent) {
+        return evenementRepository.findById(id).map(e -> {
+            e.setTitre(updatedEvent.getTitre());
+            e.setDescription(updatedEvent.getDescription());
+            e.setDateEvenement(updatedEvent.getDateEvenement());
+            e.setLieu(updatedEvent.getLieu());
+            e.setCategorie(updatedEvent.getCategorie());
+            return evenementRepository.save(e);
+        }).orElseThrow(() -> new RuntimeException("Événement non trouvé avec ID: " + id));
+    }
+
+
+}
