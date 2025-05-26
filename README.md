@@ -66,4 +66,11 @@ Ce projet est une **application web** développée pour permettre la réservatio
 
 ![Diagramme Base de Données](images/diagrame2.png)
 
+---
+
+### 🗃️ Diagramme de sequence :
+
+![Diagramme Base de Données](images/diagrame3.png)
+
+
 
