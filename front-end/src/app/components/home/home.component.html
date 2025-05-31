@@ -1,0 +1,71 @@
+<div class="home-container">
+  <app-navbar></app-navbar>
+  
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h2 class="join-now">JOIN NOW</h2>
+        <h1 class="main-title">TURN IT UP,<br>LET'S PARTY<br>HARD</h1>
+        <p class="hero-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis omare purus eget venenatis sagittis. Fusce interdum massa</p>
+        <div class="cta-buttons">
+          <button class="register-btn">REGISTER NOW</button>
+          <div class="social-icons">
+            <a href="#" class="social-icon"><i class="fas fa-globe"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=800" alt="Party" class="featured-image">
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Events Section -->
+  <section class="featured-events">
+    <h2>Événements à venir</h2>
+    <div class="events-grid">
+      <div class="event-card" *ngFor="let event of upcomingEvents">
+        <div class="event-image">
+          <img [src]="event.image" [alt]="event.title">
+          <div class="event-overlay">
+            <h3>{{event.title}}</h3>
+            <p class="event-date">{{event.date | date:'longDate'}}</p>
+            <p class="event-location">{{event.location}}</p>
+            <button class="details-button">Voir les détails</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories Section -->
+  <section class="categories">
+    <h2>Catégories d'événements</h2>
+    <div class="categories-grid">
+      <div class="category-card">
+        <i class="fas fa-music"></i>
+        <h3>Concerts</h3>
+      </div>
+      <div class="category-card">
+        <i class="fas fa-theater-masks"></i>
+        <h3>Théâtre</h3>
+      </div>
+      <div class="category-card">
+        <i class="fas fa-futbol"></i>
+        <h3>Sport</h3>
+      </div>
+      <div class="category-card">
+        <i class="fas fa-graduation-cap"></i>
+        <h3>Formation</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- Decorative Elements -->
+  <div class="decorative-star star-1">✷</div>
+  <div class="decorative-star star-2">✷</div>
+  <div class="decorative-circle circle-1"></div>
+  <div class="decorative-circle circle-2"></div>
+</div> 

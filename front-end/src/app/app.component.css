@@ -1,0 +1,6 @@
+/* Styles globaux du composant principal */
+:host {
+  display: block;
+  min-height: 100vh;
+}
+
